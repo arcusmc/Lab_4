@@ -1,5 +1,5 @@
 #Chris Davidson
-#October 20 2014
+#December 8 2014
 #GIS 501 - Lab 4 Question Ex 7 Q1
 
 import arcpy
@@ -20,4 +20,4 @@ arcpy.Buffer_analysis("Results/airports_final.shp", "Results/aiports_buffers.shp
 
 arcpy.Buffer_analysis("Results/seaports.shp", "Results/seaports_buffers.shp", "7500 METERS")
 
-#Help from Sam, Bryan on this lab, without it I would have had way to much code to work properly
+#Help from Sam, Bryan, and the book on this lab, without it I would have had way to much code to work properly
