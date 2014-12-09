@@ -16,6 +16,6 @@ dissolveFinished = "Results/parks_dissolve.shp"   #location where file goes
 
 dissolveField = "PARK_TYPE"    #identifies the dissolve field
 
-arcpy.Dissolve_management(toBeDissolved, dissolveFinished, dissolveField,"", "SINGLE_PART", "")   #creates the dissolve
+arcpy.Dissolve_management("parks.shp", "parks_dissolved.shp","PARK_TYPE", "", "FALSE")    #creates the dissolve
 
-#Help from Sam, Bryan, James on this lab, without it I would have had way to much code to work properly
+#Help from Sam, Bryan, James, and the book on this lab, without it I would have had way to much code to work properly
