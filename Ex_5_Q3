@@ -1,0 +1,21 @@
+#Chris Davidson
+#December 8 2014
+#GIS 501 - Lab 4 Question Ex 5 Q3
+
+import arcpy
+
+from arcpy import env
+
+env.workspace = "G:/Python/Data/Exercise05"    #designates the workspace
+
+env.overwriteOutput = True    #puts overwrite protection on
+
+toBeDissolved = "parks.shp"  #sets  the variables
+
+dissolveFinished = "Results/parks_dissolve.shp"   #location where file goes
+
+dissolveField = "PARK_TYPE"    #identifies the dissolve field
+
+arcpy.Dissolve_management(toBeDissolved, dissolveFinished, dissolveField,"", "SINGLE_PART", "")   #creates the dissolve
+
+#Help from Sam, Bryan, James on this lab, without it I would have had way to much code to work properly
