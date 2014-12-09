@@ -1,0 +1,29 @@
+#Chris Davidson
+#October 20 2014
+#GIS 501 - Lab 4 Question Ex 7 Q2
+
+import arcpy    #imports necessary tools from arcgis
+
+from arcpy import env    #sets the environment
+
+env.workspace = "C:/EsriPress/Python/Data/Exercise07"    #creates a workspace
+
+fc = "roads.shp"    # locates and identifes the shapefile
+
+arcpy.AddField_management(fc, "FERRY", "TEXT", "", "", 20)    #Adds a text field
+
+cursor = arcpy.da.UpdateCursor(fc, ["FEATURE", "FERRY"])    #Creates a cursor
+
+for row in cursor:    #Identifies the row in cursor
+    
+    if row[0] == "Ferry Crossing":    #location confirmed if ferry crossing
+    
+        row[1] = "YES"    #yes iif true and it continues
+
+    else:    #or if not ferry crossing
+    
+        row[1]= "NO"    #no is given
+
+    cursor.updateRow(row)   #refreshes the fields for updated data
+
+#Help from Sam, Bryan, James on this lab, without it I would have had way to much code to work properly
