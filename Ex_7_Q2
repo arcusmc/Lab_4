@@ -1,5 +1,5 @@
 #Chris Davidson
-#October 20 2014
+#December 8 2014
 #GIS 501 - Lab 4 Question Ex 7 Q2
 
 import arcpy    #imports necessary tools from arcgis
@@ -26,4 +26,4 @@ for row in cursor:    #Identifies the row in cursor
 
     cursor.updateRow(row)   #refreshes the fields for updated data
 
-#Help from Sam, Bryan, James on this lab, without it I would have had way to much code to work properly
+#Help from Sam, Bryan, James, and the book on this lab, without it I would have had way to much code to work properly
